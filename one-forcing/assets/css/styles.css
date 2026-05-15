@@ -388,21 +388,6 @@ video {
   background: #fff;
 }
 
-.pdf-figure object {
-  display: block;
-  width: 100%;
-  min-height: 520px;
-  border: 0;
-  background: #fff;
-}
-
-.pdf-figure a {
-  display: block;
-  padding: 24px;
-  color: var(--teal-dark);
-  font-weight: 800;
-}
-
 .paper-figure figcaption {
   padding: 12px 14px 14px;
   color: var(--muted);
@@ -532,7 +517,4 @@ pre {
     padding: 56px 0;
   }
 
-  .pdf-figure object {
-    min-height: 360px;
-  }
 }

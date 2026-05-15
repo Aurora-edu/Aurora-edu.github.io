@@ -9,7 +9,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/teaser.png">
   <title>One-Forcing | One-Step Autoregressive Video Generation</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260515-2">
 </head>
 <body>
   <nav class="topbar" aria-label="Primary navigation">
@@ -95,10 +95,8 @@
         <h2>Adversarial distribution matching for causal generation</h2>
         <p>One-Forcing keeps the causal autoregressive generator and DMD objective, then turns the trainable fake-score network into a joint score critic and noised-latent discriminator. Real ODE latents and generated latents are noised at sampled timesteps and passed through the same transformer backbone, so adversarial feedback targets the same distribution used by the DMD gradient.</p>
       </div>
-      <figure class="paper-figure pdf-figure">
-        <object data="assets/images/one_forcing_mechanism_redrawn_v2_aligned_color.pdf" type="application/pdf" aria-label="One-Forcing method overview with score-matching and adversarial noised-latent branches.">
-          <a href="assets/images/one_forcing_mechanism_redrawn_v2_aligned_color.pdf">Open the One-Forcing mechanism figure.</a>
-        </object>
+      <figure class="paper-figure">
+        <img src="assets/images/one_forcing_mechanism_redrawn_v2_aligned_color.png" alt="One-Forcing method overview with score-matching and adversarial noised-latent branches.">
       </figure>
     </section>
 
@@ -153,7 +151,7 @@
     <p>One-Forcing project page. Static assets are packaged for GitHub Pages.</p>
   </footer>
 
-  <script src="assets/js/data.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/data.js?v=20260515-2"></script>
+  <script src="assets/js/main.js?v=20260515-2"></script>
 </body>
 </html>
