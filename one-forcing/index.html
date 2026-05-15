@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="One-Forcing project page: stable one-step autoregressive video generation with adversarial distribution matching.">
+  <meta property="og:title" content="One-Forcing">
+  <meta property="og:description" content="Stable one-step autoregressive video generation with high-quality temporal dynamics.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/teaser.png">
+  <title>One-Forcing | One-Step Autoregressive Video Generation</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <nav class="topbar" aria-label="Primary navigation">
+    <a class="brand" href="#top">One-Forcing</a>
+    <div class="nav-links">
+      <a href="#teaser">Teaser</a>
+      <a href="#comparison">Comparison</a>
+      <a href="#method">Method</a>
+      <a href="#results">Results</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#bibtex">BibTeX</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-media" aria-hidden="true">
+      <video src="assets/videos/comparison/055_one_forcing.mp4" muted loop playsinline autoplay></video>
+      <video src="assets/videos/comparison/087_one_forcing.mp4" muted loop playsinline autoplay></video>
+      <video src="assets/videos/comparison/008_one_forcing.mp4" muted loop playsinline autoplay></video>
+      <video src="assets/videos/comparison/077_one_forcing.mp4" muted loop playsinline autoplay></video>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="venue">NeurIPS 2026 Submission</p>
+      <h1>One-Forcing</h1>
+      <p class="subtitle">Towards Stable One-Step Autoregressive Video Generation</p>
+      <p class="authors">Anonymous Authors</p>
+      <div class="hero-actions">
+        <a href="#teaser">View results</a>
+        <a href="#bibtex">Citation</a>
+        <span class="disabled-link" aria-disabled="true">Paper coming soon</span>
+        <span class="disabled-link" aria-disabled="true">Code coming soon</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="summary-band" aria-label="Key results">
+      <div>
+        <strong>1-step</strong>
+        <span>autoregressive sampling after a 4-step first chunk</span>
+      </div>
+      <div>
+        <strong>83.58</strong>
+        <span>VBench total score for the framewise model</span>
+      </div>
+      <div>
+        <strong>200</strong>
+        <span>training steps for stable framewise one-step generation</span>
+      </div>
+    </section>
+
+    <section class="section teaser-section" id="teaser">
+      <div class="section-heading">
+        <p class="eyebrow">Teaser</p>
+        <h2>One-step generation with strong motion dynamics</h2>
+        <p>All one-step rows use first-chunk 4-step denoising followed by 1-step autoregressive chunks. The same frame indices are shown within each prompt.</p>
+      </div>
+      <figure class="teaser-figure">
+        <img src="assets/images/teaser.png" alt="Teaser comparison for ice rink skater and llama coding prompts across Teacher Wan2.1, Causal Forcing, Self Forcing, and One-Forcing.">
+      </figure>
+    </section>
+
+    <section class="section abstract-section" id="abstract">
+      <div class="section-heading left">
+        <p class="eyebrow">Abstract</p>
+        <h2>Stable one-step causal video generation</h2>
+      </div>
+      <p>Existing few-step autoregressive video generators often default to 4-step sampling and degrade sharply when pushed to one step. One-Forcing augments distribution matching distillation with an auxiliary adversarial signal over noised video latents. The fake-score transformer is reused as a joint diffusion critic and discriminator, providing complementary score-matching and density-ratio gradients without an extra video discriminator. On VBench, One-Forcing establishes state-of-the-art one-step causal video generation and remains competitive with strong many-step baselines.</p>
+    </section>
+
+    <section class="section" id="comparison">
+      <div class="section-heading">
+        <p class="eyebrow">Interactive Comparison</p>
+        <h2>One-Forcing against one-step causal baselines</h2>
+        <p>Each group uses the same text prompt. Videos loop silently and can be paused or scrubbed directly.</p>
+      </div>
+      <div id="comparison-root" class="comparison-stack"></div>
+    </section>
+
+    <section class="section split-section" id="method">
+      <div class="section-copy">
+        <p class="eyebrow">Method</p>
+        <h2>Adversarial distribution matching for causal generation</h2>
+        <p>One-Forcing keeps the causal autoregressive generator and DMD objective, then turns the trainable fake-score network into a joint score critic and noised-latent discriminator. Real ODE latents and generated latents are noised at sampled timesteps and passed through the same transformer backbone, so adversarial feedback targets the same distribution used by the DMD gradient.</p>
+      </div>
+      <figure class="paper-figure">
+        <img src="assets/images/method_overview.png" alt="One-Forcing method overview with score-matching and adversarial noised-latent branches.">
+      </figure>
+    </section>
+
+    <section class="section result-section" id="results">
+      <div class="section-heading">
+        <p class="eyebrow">Analysis</p>
+        <h2>Why one-step video needs distributional supervision</h2>
+        <p>Video ODE trajectories concentrate curvature near the high-noise endpoint, making one-step trajectory following brittle. Distribution matching with adversarial noised-latent feedback directly improves the output distribution.</p>
+      </div>
+      <div class="figure-grid">
+        <figure class="paper-figure">
+          <img src="assets/images/curvature.png" alt="Curvature comparison between Wan video trajectories and EDM2 image trajectories.">
+          <figcaption>Trajectory curvature is sharply concentrated at high noise for video.</figcaption>
+        </figure>
+        <figure class="paper-figure">
+          <img src="assets/images/vbench_radar.png" alt="VBench radar plot comparing One-Forcing and baselines.">
+          <figcaption>One-Forcing improves the one-step VBench profile across key quality and semantic dimensions.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="section-heading">
+        <p class="eyebrow">Gallery</p>
+        <h2>Additional One-Forcing samples</h2>
+        <p>More generated videos from the same one-step autoregressive setting.</p>
+      </div>
+      <div class="gallery-tabs" role="tablist" aria-label="Sample gallery">
+        <button type="button" class="tab-button active" data-gallery-tab="set_a">Curated set</button>
+        <button type="button" class="tab-button" data-gallery-tab="set_b">Extended set</button>
+      </div>
+      <div id="gallery-root" class="video-grid"></div>
+      <div class="load-row">
+        <button type="button" id="load-more" class="load-button">Load more samples</button>
+      </div>
+    </section>
+
+    <section class="section bibtex-section" id="bibtex">
+      <div class="section-heading left">
+        <p class="eyebrow">Citation</p>
+        <h2>BibTeX</h2>
+      </div>
+      <pre><code>@inproceedings{anonymous2026oneforcing,
+  title     = {One-Forcing: Towards Stable One-Step Autoregressive Video Generation},
+  author    = {Anonymous Authors},
+  booktitle = {NeurIPS},
+  year      = {2026}
+}</code></pre>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>One-Forcing project page. Static assets are packaged for GitHub Pages.</p>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
