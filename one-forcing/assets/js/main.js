@@ -1,7 +1,6 @@
 const data = window.PROJECT_DATA;
 
 const galleryState = {
-  group: "set_a",
   visible: 12
 };
 
@@ -82,7 +81,7 @@ function renderComparison() {
 function renderGallery() {
   const root = document.getElementById("gallery-root");
   const loadMore = document.getElementById("load-more");
-  const items = data.more[galleryState.group] || [];
+  const items = data.more || [];
   const visibleItems = items.slice(0, galleryState.visible);
 
   root.textContent = "";
@@ -98,18 +97,7 @@ function renderGallery() {
   setupLazyVideos(root.querySelectorAll("video[data-src]"));
 }
 
-function setupGalleryTabs() {
-  document.querySelectorAll("[data-gallery-tab]").forEach((button) => {
-    button.addEventListener("click", () => {
-      galleryState.group = button.dataset.galleryTab;
-      galleryState.visible = 12;
-      document.querySelectorAll("[data-gallery-tab]").forEach((tab) => {
-        tab.classList.toggle("active", tab === button);
-      });
-      renderGallery();
-    });
-  });
-
+function setupGalleryControls() {
   document.getElementById("load-more").addEventListener("click", () => {
     galleryState.visible += 12;
     renderGallery();
@@ -148,6 +136,6 @@ function setupLazyVideos(videoNodes) {
 }
 
 renderComparison();
-setupGalleryTabs();
+setupGalleryControls();
 renderGallery();
 setupLazyVideos();

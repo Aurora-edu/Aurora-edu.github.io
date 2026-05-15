@@ -173,8 +173,7 @@ h1 {
 
 .hero-actions a,
 .disabled-link,
-.load-button,
-.tab-button {
+.load-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -401,14 +400,6 @@ video {
   gap: 18px;
 }
 
-.gallery-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 18px;
-}
-
-.tab-button,
 .load-button {
   color: var(--ink);
   background: var(--surface);
@@ -416,9 +407,6 @@ video {
   cursor: pointer;
 }
 
-.tab-button.active,
-.tab-button:hover,
-.tab-button:focus-visible,
 .load-button:hover,
 .load-button:focus-visible {
   color: #fff;
