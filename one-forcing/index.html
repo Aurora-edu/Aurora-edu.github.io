@@ -95,8 +95,10 @@
         <h2>Adversarial distribution matching for causal generation</h2>
         <p>One-Forcing keeps the causal autoregressive generator and DMD objective, then turns the trainable fake-score network into a joint score critic and noised-latent discriminator. Real ODE latents and generated latents are noised at sampled timesteps and passed through the same transformer backbone, so adversarial feedback targets the same distribution used by the DMD gradient.</p>
       </div>
-      <figure class="paper-figure">
-        <img src="assets/images/method_overview.png" alt="One-Forcing method overview with score-matching and adversarial noised-latent branches.">
+      <figure class="paper-figure pdf-figure">
+        <object data="assets/images/one_forcing_mechanism_redrawn_v2_aligned_color.pdf" type="application/pdf" aria-label="One-Forcing method overview with score-matching and adversarial noised-latent branches.">
+          <a href="assets/images/one_forcing_mechanism_redrawn_v2_aligned_color.pdf">Open the One-Forcing mechanism figure.</a>
+        </object>
       </figure>
     </section>
 

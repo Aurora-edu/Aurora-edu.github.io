@@ -28,14 +28,6 @@ function createCard(item, options = {}) {
   labelText.textContent = options.label || item.label || "Video";
   label.appendChild(labelText);
 
-  const indexText = options.index || item.index;
-  if (indexText) {
-    const idx = document.createElement("span");
-    idx.className = "index";
-    idx.textContent = indexText;
-    label.appendChild(idx);
-  }
-
   const frame = document.createElement("div");
   frame.className = "video-frame";
   frame.appendChild(createVideo(item.src, options.autoplay !== false));
@@ -65,15 +57,10 @@ function renderComparison() {
     const header = document.createElement("div");
     header.className = "row-header";
 
-    const index = document.createElement("div");
-    index.className = "row-index";
-    index.textContent = row.index;
-
     const prompt = document.createElement("p");
     prompt.className = "row-title";
     prompt.textContent = row.prompt;
 
-    header.appendChild(index);
     header.appendChild(prompt);
     section.appendChild(header);
 
@@ -82,7 +69,6 @@ function renderComparison() {
     row.videos.forEach((video) => {
       grid.appendChild(createCard(video, {
         label: video.label,
-        index: row.index,
         featured: video.accent === "ours",
         autoplay: true
       }));
@@ -103,7 +89,6 @@ function renderGallery() {
   visibleItems.forEach((item) => {
     root.appendChild(createCard(item, {
       label: "One-Forcing",
-      index: item.index,
       title: item.title,
       autoplay: true
     }));

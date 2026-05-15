@@ -298,23 +298,10 @@ h1 {
 }
 
 .row-header {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 18px;
-  align-items: start;
+  display: block;
   padding: 18px 20px;
   border-bottom: 1px solid var(--line);
   background: #fbfcfb;
-}
-
-.row-index {
-  min-width: 58px;
-  color: #fff;
-  background: var(--teal-dark);
-  border-radius: 6px;
-  padding: 7px 9px;
-  text-align: center;
-  font-weight: 850;
 }
 
 .row-title {
@@ -363,16 +350,6 @@ h1 {
   background: linear-gradient(90deg, var(--teal), var(--blue));
 }
 
-.index {
-  color: var(--muted);
-  font-weight: 800;
-  font-size: 0.78rem;
-}
-
-.video-card.featured .index {
-  color: rgba(255, 255, 255, 0.82);
-}
-
 .video-frame {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -409,6 +386,21 @@ video {
   width: 100%;
   height: auto;
   background: #fff;
+}
+
+.pdf-figure object {
+  display: block;
+  width: 100%;
+  min-height: 520px;
+  border: 0;
+  background: #fff;
+}
+
+.pdf-figure a {
+  display: block;
+  padding: 24px;
+  color: var(--teal-dark);
+  font-weight: 800;
 }
 
 .paper-figure figcaption {
@@ -540,12 +532,7 @@ pre {
     padding: 56px 0;
   }
 
-  .row-header {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .row-index {
-    width: max-content;
+  .pdf-figure object {
+    min-height: 360px;
   }
 }
