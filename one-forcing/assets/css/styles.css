@@ -82,13 +82,14 @@ a {
 
 .hero {
   position: relative;
-  min-height: 86vh;
+  min-height: 78vh;
   overflow: hidden;
   display: grid;
-  align-items: end;
-  padding: 116px clamp(20px, 5vw, 72px) 58px;
+  align-items: center;
+  padding: 118px 48px 54px;
   color: #fff;
   background: #101618;
+  text-align: center;
 }
 
 .hero-media {
@@ -111,13 +112,15 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(7, 13, 15, 0.9) 0%, rgba(7, 13, 15, 0.64) 42%, rgba(7, 13, 15, 0.32) 100%),
-    linear-gradient(0deg, rgba(7, 13, 15, 0.72) 0%, rgba(7, 13, 15, 0.05) 42%);
+    linear-gradient(90deg, rgba(7, 13, 15, 0.72) 0%, rgba(7, 13, 15, 0.52) 50%, rgba(7, 13, 15, 0.72) 100%),
+    linear-gradient(0deg, rgba(7, 13, 15, 0.7) 0%, rgba(7, 13, 15, 0.28) 48%, rgba(7, 13, 15, 0.78) 100%);
 }
 
 .hero-content {
   position: relative;
-  width: min(1040px, 100%);
+  width: min(980px, 100%);
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
 .venue,
@@ -144,22 +147,33 @@ p {
 h1 {
   margin: 0;
   color: #fff;
-  font-size: clamp(4rem, 12vw, 9.2rem);
-  line-height: 0.9;
+  font-size: 7.2rem;
+  line-height: 0.96;
   letter-spacing: 0;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
 }
 
 .subtitle {
-  max-width: 840px;
-  margin: 18px 0 0;
+  max-width: 980px;
+  margin: 10px auto 0;
   color: rgba(255, 255, 255, 0.92);
-  font-size: clamp(1.35rem, 3vw, 2.35rem);
+  font-size: 2.35rem;
   font-weight: 720;
   line-height: 1.12;
+  letter-spacing: 0;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.48);
+}
+
+.title-note {
+  max-width: 760px;
+  margin: 16px auto 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.12rem;
+  font-weight: 650;
 }
 
 .authors {
-  margin: 14px 0 0;
+  margin: 18px auto 0;
   color: rgba(255, 255, 255, 0.74);
   font-size: 1.02rem;
 }
@@ -167,6 +181,7 @@ h1 {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   margin-top: 28px;
 }
@@ -453,6 +468,19 @@ pre {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .hero {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+
+  h1 {
+    font-size: 5.6rem;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
   .summary-band,
   .comparison-grid,
   .video-grid,
@@ -481,12 +509,20 @@ pre {
   }
 
   .hero {
-    min-height: 82vh;
+    min-height: 76vh;
     padding: 112px 18px 34px;
   }
 
   h1 {
-    font-size: clamp(3.2rem, 18vw, 5.4rem);
+    font-size: 2.9rem;
+  }
+
+  .subtitle {
+    font-size: 1.32rem;
+  }
+
+  .title-note {
+    font-size: 0.98rem;
   }
 
   .hero-actions {
