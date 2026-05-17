@@ -231,32 +231,6 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
-.summary-band {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.summary-band div {
-  padding: 24px clamp(18px, 4vw, 48px);
-  background: var(--surface);
-}
-
-.summary-band strong {
-  display: block;
-  color: var(--ink);
-  font-size: clamp(1.55rem, 4vw, 2.6rem);
-  line-height: 1;
-}
-
-.summary-band span {
-  display: block;
-  margin-top: 8px;
-  color: var(--muted);
-}
-
 .section {
   width: min(1180px, calc(100% - 36px));
   margin: 0 auto;
@@ -492,7 +466,6 @@ pre {
     font-size: 2rem;
   }
 
-  .summary-band,
   .comparison-grid,
   .video-grid,
   .figure-grid {
@@ -544,7 +517,6 @@ pre {
     gap: 8px;
   }
 
-  .summary-band,
   .comparison-grid,
   .video-grid,
   .figure-grid {
