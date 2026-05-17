@@ -167,7 +167,7 @@ h1 {
 .authors {
   margin: 20px auto 0;
   color: #78e7d8;
-  font-size: 1.24rem;
+  font-size: 1.42rem;
   font-weight: 760;
   text-shadow: 0 3px 16px rgba(0, 0, 0, 0.56);
 }
@@ -185,7 +185,7 @@ h1 {
 .publication-affiliations {
   margin-top: 4px;
   color: rgba(232, 255, 251, 0.86);
-  font-size: 1.08rem;
+  font-size: 1.18rem;
   font-weight: 620;
   text-shadow: 0 3px 14px rgba(0, 0, 0, 0.5);
 }
@@ -533,11 +533,11 @@ pre {
   }
 
   .authors {
-    font-size: 1.08rem;
+    font-size: 1.16rem;
   }
 
   .publication-affiliations {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .hero-actions {
