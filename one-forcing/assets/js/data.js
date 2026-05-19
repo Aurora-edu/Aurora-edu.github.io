@@ -81,26 +81,6 @@ window.PROJECT_DATA = {
       ]
     },
     {
-      "prompt": "A stunning mid-afternoon landscape photograph with a low camera angle, showcasing several giant wooly mammoths treading through a snowy meadow. Their long, wooly fur gently billows in the brisk wind as they move, creating a sense of natural movement. Snow-covered trees and dramatic snow-capped mountains loom in the distance, adding to the majestic setting. Wispy clouds and a high sun cast a warm glow over the scene, enhancing the serene and awe-inspiring atmosphere. The depth of field brings out the detailed textures of the mammoths and the snowy environment, capturing every nuance of these prehistoric giants in breathtaking clarity.",
-      "videos": [
-        {
-          "label": "One-Forcing",
-          "src": "assets/videos/comparison/077_one_forcing.mp4",
-          "accent": "ours"
-        },
-        {
-          "label": "Self Forcing",
-          "src": "assets/videos/comparison/077_self_forcing.mp4",
-          "accent": "baseline"
-        },
-        {
-          "label": "Causal Forcing",
-          "src": "assets/videos/comparison/077_causal_forcing.mp4",
-          "accent": "baseline"
-        }
-      ]
-    },
-    {
       "prompt": "On a winter morning at a snow covered temple gate, a monk in a saffron robe and thick shawl dominates the frame in UHD. He rings a brass bell, then breathes out slowly as the camera pushes close to the bell\u2019s vibration and his calm eyes. Behind him, cedar branches sag with snow and stone lanterns glow faintly in pale sun. Crisp textures and natural grading make the quiet scene solemn, pure, and breathtaking.",
       "videos": [
         {
