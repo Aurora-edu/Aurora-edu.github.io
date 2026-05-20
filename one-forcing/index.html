@@ -17,7 +17,6 @@
     <div class="nav-links">
       <a href="#comparison">Comparison</a>
       <a href="#method">Method</a>
-      <a href="#results">Results</a>
       <a href="#gallery">Gallery</a>
       <a href="#bibtex">BibTeX</a>
     </div>
@@ -77,24 +76,6 @@
       <figure class="paper-figure">
         <img src="assets/images/one_forcing_mechanism_redrawn_v2_aligned_color.png?v=20260517-1" alt="One-Forcing method overview with score-matching and adversarial noised-latent branches.">
       </figure>
-    </section>
-
-    <section class="section result-section" id="results">
-      <div class="section-heading">
-        <p class="eyebrow">Analysis</p>
-        <h2>Why one-step video needs distributional supervision</h2>
-        <p>Video ODE trajectories concentrate curvature near the high-noise endpoint, making one-step trajectory following brittle. Distribution matching with adversarial noised-latent feedback directly improves the output distribution.</p>
-      </div>
-      <div class="figure-grid">
-        <figure class="paper-figure">
-          <img src="assets/images/curvature.png" alt="Curvature comparison between Wan video trajectories and EDM2 image trajectories.">
-          <figcaption>Trajectory curvature is sharply concentrated at high noise for video.</figcaption>
-        </figure>
-        <figure class="paper-figure">
-          <img src="assets/images/vbench_radar.png" alt="VBench radar plot comparing One-Forcing and baselines.">
-          <figcaption>One-Forcing improves the one-step VBench profile across key quality and semantic dimensions.</figcaption>
-        </figure>
-      </div>
     </section>
 
     <section class="section" id="gallery">
