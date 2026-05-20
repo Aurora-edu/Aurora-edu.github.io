@@ -272,15 +272,33 @@ h1 {
   box-shadow: var(--shadow);
 }
 
-.abstract-section {
+.tldr-section {
   width: min(900px, calc(100% - 36px));
   padding-top: 38px;
+  text-align: center;
 }
 
-.abstract-section > p {
+.tldr-section h2 {
+  margin: 0 0 16px;
+  color: var(--blue);
+  font-size: clamp(1.35rem, 2.4vw, 1.55rem);
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.tldr-card {
+  padding: 24px;
+  text-align: justify;
+  background: #f8f9fa;
+  border-left: 4px solid var(--blue);
+  border-radius: 8px;
+}
+
+.tldr-card p {
   margin: 0;
   color: #333a40;
-  font-size: 1.08rem;
+  font-size: 1.25rem;
+  line-height: 1.6;
 }
 
 .comparison-stack {

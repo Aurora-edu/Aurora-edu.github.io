@@ -9,7 +9,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/teaser.png">
   <title>One-Forcing | Stable One-Step Autoregressive Video Generation</title>
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260517-7">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260520-1">
 </head>
 <body>
   <nav class="topbar" aria-label="Primary navigation">
@@ -52,12 +52,11 @@
   </header>
 
   <main>
-    <section class="section abstract-section" id="abstract">
-      <div class="section-heading left">
-        <p class="eyebrow">Abstract</p>
-        <h2>Stable one-step causal video generation</h2>
+    <section class="section tldr-section" id="abstract">
+      <h2>TL;DR</h2>
+      <div class="tldr-card">
+        <p>One-Forcing enables stable <strong>1-step autoregressive video generation</strong> by augmenting DMD-based causal distillation with a shared noised-latent adversarial critic, achieving <strong>state-of-the-art</strong> 1-step VBench performance and efficient framewise generation.</p>
       </div>
-      <p>Existing few-step autoregressive video generators often default to 4-step sampling and degrade sharply when pushed to one step. One-Forcing augments distribution matching distillation with an auxiliary adversarial signal over noised video latents. The fake-score transformer is reused as a joint diffusion critic and discriminator, providing complementary score-matching and density-ratio gradients without an extra video discriminator. On VBench, One-Forcing establishes state-of-the-art one-step causal video generation and remains competitive with strong many-step baselines.</p>
     </section>
 
     <section class="section" id="comparison">
