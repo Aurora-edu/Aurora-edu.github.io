@@ -99,7 +99,7 @@ function renderGallery() {
 
 function setupGalleryControls() {
   document.getElementById("load-more").addEventListener("click", () => {
-    galleryState.visible += 12;
+    galleryState.visible = (data.more || []).length;
     renderGallery();
   });
 }
