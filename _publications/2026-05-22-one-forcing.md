@@ -7,8 +7,10 @@ excerpt: "One-Forcing enables stable one-step autoregressive video generation by
 date: 2026-05-22
 venue: "arXiv preprint arXiv:2605.23458"
 authors: "Jiaqi Feng, Justin Cui, Yuanhao Ban, Cho-Jui Hsieh"
+authors_html: "<strong>Jiaqi Feng</strong>, Justin Cui, Yuanhao Ban, Cho-Jui Hsieh"
 teaser: "/one-forcing/assets/images/teaser.png"
 featured_order: 2
+venue_html: "<em>arXiv preprint arXiv:2605.23458</em>, 2026"
 paperurl: "https://arxiv.org/abs/2605.23458"
 codeurl: "https://github.com/Aurora-edu/One-Forcing"
 projecturl: "/one-forcing/"

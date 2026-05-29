@@ -12,11 +12,14 @@ I'm a third-year undergraduate student majoring in Mathematics and Physics at Ts
 
 Now I'm looking forward to 27fall phd positions.
 
-## Recent Selected Publications [Full List]({{ "/publications/" | relative_url }})
-
-(*Equal Contribution, #Corresponding Author)
+<div class="publication-section-heading">
+  <span class="publication-heading">Recent Selected Publications [<a style="font-size:20px;" href="{{ "/publications/" | relative_url }}"> Full List </a>]</span>
+  <p>(*Equal Contribution, #Corresponding Author)</p>
+</div>
 
 {% assign selected_publications = site.publications | sort: "featured_order" %}
+<table class="publication-list"><tbody>
 {% for post in selected_publications limit: 2 %}
   {% include publication-card.html pub=post %}
 {% endfor %}
+</tbody></table>
