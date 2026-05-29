@@ -1,0 +1,38 @@
+{% include base_path %}
+{% assign pub = include.pub | default: post %}
+{% assign target_url = pub.projecturl | default: pub.paperurl | default: pub.url %}
+{% assign pub_title = pub.title | strip_html | strip_newlines %}
+
+<article class="publication-card">
+  {% if pub.teaser %}
+    <a class="publication-card__media" href="{% if target_url contains '://' %}{{ target_url }}{% else %}{{ target_url | prepend: base_path }}{% endif %}">
+      <img src="{% if pub.teaser contains '://' %}{{ pub.teaser }}{% else %}{{ pub.teaser | prepend: base_path }}{% endif %}" alt="{{ pub_title | escape_once }} thumbnail">
+    </a>
+  {% endif %}
+
+  <div class="publication-card__body">
+    <h2 class="publication-card__title">
+      <a href="{% if target_url contains '://' %}{{ target_url }}{% else %}{{ target_url | prepend: base_path }}{% endif %}">{{ pub_title }}</a>
+    </h2>
+
+    {% if pub.authors %}
+      <p class="publication-card__authors">{{ pub.authors }}</p>
+    {% endif %}
+
+    {% if pub.venue %}
+      <p class="publication-card__venue">{{ pub.venue }}</p>
+    {% endif %}
+
+    {% if pub.links %}
+      <p class="publication-card__links">
+        {% for link in pub.links %}
+          [<a href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | prepend: base_path }}{% endif %}">{{ link.label }}</a>]{% unless forloop.last %} {% endunless %}
+        {% endfor %}
+      </p>
+    {% endif %}
+
+    {% if pub.excerpt %}
+      <p class="publication-card__excerpt">{{ pub.excerpt | strip_html | strip_newlines }}</p>
+    {% endif %}
+  </div>
+</article>

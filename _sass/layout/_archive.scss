@@ -84,6 +84,75 @@
   }
 }
 
+.publication-card {
+  display: grid;
+  grid-template-columns: minmax(180px, 30%) 1fr;
+  gap: 1.1rem;
+  align-items: start;
+  margin: 1.35rem 0 1.75rem;
+}
+
+.publication-card__media {
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--global-border-color);
+  background: #fff;
+}
+
+.publication-card__media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.publication-card__title {
+  margin: 0 0 0.25rem;
+  font-size: $type-size-5;
+  line-height: 1.25;
+  font-family: $sans-serif;
+}
+
+.publication-card__title a {
+  text-decoration: none;
+}
+
+.publication-card__title a:hover {
+  text-decoration: underline;
+}
+
+.publication-card__authors,
+.publication-card__venue,
+.publication-card__links,
+.publication-card__excerpt {
+  margin: 0.15rem 0;
+  font-size: $type-size-6;
+  line-height: 1.45;
+}
+
+.publication-card__venue {
+  color: var(--global-text-color-light);
+}
+
+.publication-card__links {
+  font-size: 0.9rem;
+}
+
+.publication-card__excerpt {
+  margin-top: 0.35rem;
+}
+
+@include breakpoint(max-width $small) {
+  .publication-card {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-card__media {
+    max-width: 100%;
+  }
+}
+
 
 /*
    List view
