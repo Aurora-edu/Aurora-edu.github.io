@@ -93,13 +93,14 @@
 
   p {
     margin: 1em 0;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 .publication-heading {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .publication-section-heading a,
@@ -126,7 +127,7 @@
   border-collapse: separate;
   color: #000;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .publication-list tr,
@@ -140,13 +141,13 @@
 .publication-list a,
 .publication-list strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .publication-entry__image {
-  width: 30%;
-  max-width: 30%;
-  padding: 20px;
+  width: 24%;
+  max-width: 24%;
+  padding: 16px 18px 16px 12px;
 }
 
 .publication-entry__image img {
@@ -156,14 +157,17 @@
 }
 
 .publication-entry__content {
-  width: 75%;
-  padding: 0.5em;
+  width: 76%;
+  padding: 0.35em 0.5em;
+  line-height: 1.35;
 }
 
 .publication-entry__title {
+  display: inline-block;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.25;
 }
 
 .publication-entry__content p {

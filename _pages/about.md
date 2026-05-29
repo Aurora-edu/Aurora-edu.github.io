@@ -13,7 +13,7 @@ I'm a third-year undergraduate student majoring in Mathematics and Physics at Ts
 Now I'm looking forward to 27fall phd positions.
 
 <div class="publication-section-heading">
-  <span class="publication-heading">Recent Selected Publications [<a style="font-size:20px;" href="{{ "/publications/" | relative_url }}"> Full List </a>]</span>
+  <span class="publication-heading">Publications</span>
   <p>(*Equal Contribution, #Corresponding Author)</p>
 </div>
 
